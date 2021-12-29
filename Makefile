@@ -1,11 +1,11 @@
-CC += gcc
-CFLAGS += -Werror -Wall -Wextra
+CC?=gcc
+CFLAGS+=-Werror -Wall -Wextra
 
-$(info "${CFLAGS}")
+$(info Cflags are: ${CFLAGS})
 
-.PHONY: all clean
+.PHONY: all check clean
 
-all: check
+all: fsynctest
 
 check: fsynctest
 	./fsynctest

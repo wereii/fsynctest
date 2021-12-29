@@ -6,5 +6,6 @@
 
 - Install `make` and `gcc` packages
 - Clone this repository and `cd` into it
-- run `make`, it will build the check and run it
+- running `make` to build the binary, `fsynctest`
+  - runing `make check` will build the binary if it's not yet built and run it
 - after running make/building at least once you can run `./fsynctest` directly
