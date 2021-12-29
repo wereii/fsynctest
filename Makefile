@@ -1,7 +1,7 @@
 CC?=gcc
 CFLAGS+=-Werror -Wall -Wextra
 
-$(info Cflags are: ${CFLAGS})
+# $(info Cflags are: ${CFLAGS})
 
 .PHONY: all check clean
 
