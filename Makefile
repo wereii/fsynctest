@@ -1,13 +1,17 @@
-CC=gcc
-CCFLAGS=-Wall -Wextra
+CC += gcc
+CFLAGS += -Werror -Wall -Wextra
 
-.PHONY: all check
+$(info "${CFLAGS}")
+
+.PHONY: all clean
 
 all: check
 
-check: fsync_syscall
-	chmod +x check.sh
-	./check.sh
+check: fsynctest
+	./fsynctest
 
-fsync_syscall: fsync_syscall.c
-	$(CC) $(CCFLAGS) -o $@ $^
+fsynctest: fsynctest.c
+	$(CC) $(CFLAGS) -o $@ $^
+
+clean:
+	rm -f fsynctest
